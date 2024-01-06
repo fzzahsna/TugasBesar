@@ -1,0 +1,104 @@
+//Create a User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Icha",
+    "email": "icha@gmail.com",
+    "password": "12345678",
+    "confPassword": "12345678",
+    "role": "user"
+}
+
+###
+//get All Users
+GET http://localhost:5000/users
+
+
+###
+//Get Single user
+GET http://localhost:5000/users/29d4219b-8cb4-48bd-9f4d-7a3e4991a1d9
+
+
+###
+//Update User
+PATCH http://localhost:5000/users/50d65e75-3de2-43f8-aca4-d057a2350563
+Content-Type: application/json
+
+{
+    "name": "John Updated",
+    "email": "john@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+
+###
+//Delete a user
+DELETE http://localhost:5000/users/50d65e75-3de2-43f8-aca4-d057a2350563
+
+
+###
+//Login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "kelompok@gmail.com",
+    "password": "123456789"
+}
+
+###
+//Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "john@gmail.com",
+    "password": "12345678"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+
+###
+//GET all Buku
+GET http://localhost:5000/bukus
+
+
+###
+//POST Data buku
+POST http://localhost:5000/bukus
+Content-Type: application/json
+
+{
+    "judul": "cara menjadi waras",
+    "penulis": "Alay",
+    "penerbit": "Erlangga",
+    "kategori": "Novel",
+    "tahunTerbit": "2023",
+    "stok": "5"
+}
+
+###
+//Update Data buku
+PATCH http://localhost:5000/bukus/f36eaec3-5f9a-48a6-8dc5-015890fc2376
+Content-Type: application/json
+
+{
+    "judul": "Basis Data",
+    "penulis": "Dr. Masidah",
+    "penerbit": "Erlangga",
+    "kategori": "Teknologi",
+    "tahunTerbit": "2020",
+    "stok": "3"
+}
+
+###
+//Delete a buku
+DELETE http://localhost:5000/bukus/7b3f340b-76f1-4cb1-af88-f90179c6b31a
